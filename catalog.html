@@ -72,9 +72,52 @@
       </li>
     </ul>
     <h1 class="page-title">Перфораторы</h1>
-    <section class="filter">
+    <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <!-- Здесь будет форма -->
+      <form class="filter" method="GET" action="#">
+        <fieldset>
+          <legend>Цена:</legend>
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
+          <ul>
+            <li class="filter-option">
+              <input type="checkbox" name="bosch" id="bosch" checked>
+              <label for="bosch">BOSCH</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="interskol" id="interskol">
+              <label for="interskol">ИНТЕРСКОЛ</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="makita" id="makita" checked>
+              <label for="makita">MAKITA</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="dewalt" id="dewalt">
+              <label for="dewalt">DEWALT</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="hitachi" id="hitachi">
+              <label for="hitachi">HITACHI</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul>
+            <li class="filter-option">
+              <input type="checkbox" name="power-supply" id="accumulators" checked>
+              <label for="accumulators">АККУМУЛЯТОРНЫЕ</label>
+            </li>
+            <li class="filter-option">
+              <input type="checkbox" name="power-supply" id="electricity">
+              <label for="electricity">СЕТЕВЫЕ</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filter-button" type="submit">Показать</button>
+      </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Список перфораторов</h2>
@@ -97,7 +140,7 @@
           </h3>
           <p class="catalog-item-image">
             <a href="#">
-                <img src="img/bfg-6000.jpg" width="144" height="128" lt="Перфоратор BOSCH BFG 6000">
+                <img src="img/bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
             </a>
           </p>
           <span class="old-price">30500</span>
