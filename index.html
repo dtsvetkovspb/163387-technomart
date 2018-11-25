@@ -72,10 +72,35 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <a href="#">
-            <img src="img/map.jpg" width="300" height="158" alt="карта">
+            <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
           </a>
             <a href="#">Заблудились? Напишите нам!</a>
         </section>
+        <section class="modal modal-feedback">
+          <form action="#" class="feedback-form" method="POST">
+            <p class="feedback-item">
+              <label for="feedback-name">Ваше имя:</label>
+              <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-email">Ваш e-mail:</label>
+              <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-text">Текст письма:</label>
+              <input id="feedback-text" type="text" name="feedback" placeholder="В свободной форме">
+            </p>
+            <button type="submit">Отправить</button>
+          </form>
+          <button class="modal-close" type="button">Закрыть</button>
+        </section>
+        <setion class="modal modal-map">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <p>
+            <img src="img/map-lg.jpg" width="1736" height="779" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
+          </p>
+          <button class="modal-close" type="button">Закрыть</button>  
+        </setion>
       </div>
     </main>
     <footer class="main-footer">
