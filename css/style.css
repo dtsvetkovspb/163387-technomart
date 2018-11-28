@@ -6,4 +6,100 @@ body {
     font-family: "Cuprum", "Arial", sans-serif;
     color: #000;
     line-height: 24px;
+    font-weight: 400;
+
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.upper-header {
+   font-size: 17px;
+   line-height: 18px;
+   color: #fff; 
+
+   background-color: #293449;
+}
+
+.logotype {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+}
+
+.logotype:hover,
+.logotype:focus {
+    background-color: #ca2c37;
+}
+
+.upper-header-checkout {
+    background-color: #63a63e;
+}
+
+.upper-header-checkout:hover,
+.upper-header-checkout:focus {
+    background-color: #5fbb2d;
+}
+
+.middle-header {
+    background-color: #f3f7f9;
+}
+
+.middle-header-slogan {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
+}
+
+.middle-header-requisites {
+    font-size: 14px;
+    line-height: 24px;
+    color: #32425c;
+}
+
+.middle-header-telephone {
+    color: #ee3643;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.middle-header-user-interface a {
+    color: #000;
+    font-size: 21px;
+    font-weight: 21px;
+    
+    background-color: #fff;
+}
+
+.middle-header-user-interface a:hover,
+.middle-header-user-interface a:focus {
+    color: #ee3643;
+}
+.main-navigation {
+    font-size: 17px;
+    line-height: 17px;
+    color: #fff;
+
+    background-color: #32425c;
+}
+
+.main-navigation ul {
+    list-style: none;
+}
+
+.main-navigation a {
+    color: #fff;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+    background-color: #293449;
 }
