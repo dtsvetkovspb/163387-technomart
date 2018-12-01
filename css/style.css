@@ -51,6 +51,7 @@ a {
 }
 
 .middle-header-slogan {
+    margin: 0;
     font-style: italic;
     font-weight: 700;
     font-size: 16px;
@@ -92,6 +93,7 @@ a {
 }
 
 .main-navigation ul {
+    margin: 0;
     list-style: none;
 }
 
@@ -197,4 +199,89 @@ h2 {
 .footer-developed a:hover,
 .footer-developed a:focus {
     text-decoration: underline;
+}
+
+.red-cart {
+    background-color: #ee3643;
+}
+
+.red-cart:hover,
+.red-cart:focus {
+    background-color: #ca2c37;
+}
+
+.inner-page {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.breadcrumbs {
+    list-style: none;
+}
+
+.breadcrumbs li a {
+    color: #000;
+    text-transform: uppercase;
+}
+
+.page-title {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425c;
+    
+    background-color: #f2f6f8;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.filter ul {
+    list-style: none;
+    line-height: 20px;
+    
+}
+
+.filter-option label {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.catalog-item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.catalog-item-price {
+    color: #fff;
+    background-color: #ee3643;
 }
