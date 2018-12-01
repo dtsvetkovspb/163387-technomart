@@ -103,3 +103,98 @@ a {
 .main-navigation a:focus {
     background-color: #293449;
 }
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.about-us ul {
+    list-style: none;
+}
+
+.about-us li {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.red-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+
+    background-color: #ee3643;
+}
+
+.red-link:hover,
+.red-link:focus {
+    background-color: #ca2c37;
+}
+
+.upper-footer {
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+
+    background-color: #32425c;
+}
+
+.footer-logotype {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+}
+
+.footer-logotype:hover,
+.footer-logotype:focus {
+    background-color: #ca2c37;
+}
+
+.upper-footer ul {
+    list-style: none;
+    margin: 0;
+}
+.upper-footer ul:last-child li a {
+    color: #ffd180;
+}
+
+.upper-footer li a:hover,
+.upper-footer li a:focus {
+    text-decoration: underline;
+}
+
+.lower-footer {
+    color: white;
+    font-size: 16px;
+    line-height: 18px;
+
+    background-color: #293449;
+}
+
+.footer-copyright {
+    margin: 0;
+}
+
+.lower-footer ul {
+    list-style: none;
+}
+
+.footer-feedback a,
+.footer-developed a{
+    color: #ffd180;
+}
+
+.footer-developed {
+    margin-bottom: 0;
+}
+
+.footer-feedback a:hover,
+.footer-feedback a:focus,
+.footer-developed a:hover,
+.footer-developed a:focus {
+    text-decoration: underline;
+}
