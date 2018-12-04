@@ -285,3 +285,51 @@ h2 {
     color: #fff;
     background-color: #ee3643;
 }
+
+/* Сеточные стили */
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+.main-header {
+    margin-bottom: 60px;
+    background-color: #f3f7f9;
+}
+
+.upper-header { 
+    min-height: 40px;
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.upper-header-logo {
+    margin: 0;
+    padding: 0;
+    min-height: 42px;
+    width: 220px;
+    margin-right: 10px;
+}
+
+.search-form {
+    width: 240px;
+    min-height: 42px;
+}
+
+.upper-header-bookmarks {
+    width: 160px;
+}
+
+.upper-header-basket {
+    width: 160px;
+}
+
+.upper-header-checkout {
+    width: 150px;
+}
+
+
+
+
