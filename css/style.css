@@ -295,7 +295,7 @@ h2 {
   }
 
 .main-header {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     background-color: #f3f7f9;
 }
 
@@ -351,6 +351,7 @@ h2 {
     min-height: 75px;
     margin-left: auto;
 }
+
 
 
 
