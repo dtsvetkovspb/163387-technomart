@@ -135,12 +135,16 @@ h2 {
     background-color: #ca2c37;
 }
 
+.main-footer {
+    background-color: #32425c;
+}
+
 .upper-footer {
     color: white;
     font-size: 18px;
     line-height: 24px;
 
-    background-color: #32425c;
+    
 }
 
 .footer-logotype {
@@ -159,8 +163,9 @@ h2 {
 .upper-footer ul {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
-.upper-footer ul:last-child li a {
+.lower-list li a {
     color: #ffd180;
 }
 
@@ -179,10 +184,6 @@ h2 {
 
 .footer-copyright {
     margin: 0;
-}
-
-.lower-footer ul {
-    list-style: none;
 }
 
 .footer-feedback a,
@@ -251,7 +252,6 @@ h2 {
 .filter ul {
     list-style: none;
     line-height: 20px;
-    
 }
 
 .filter-option label {
@@ -341,7 +341,6 @@ h2 {
 }
 
 .middle-header-requisites {
-    outline: 1px solid red;
     width: 320px;
     min-height: 75px;
 }
@@ -352,6 +351,98 @@ h2 {
     margin-left: auto;
 }
 
+.upper-content-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;   
+}
 
+.footer-logotype {
+    width: 220px;
+    min-height: 65px;
+}
 
+.upper-list {
+    width: 550px;
+}
 
+.lower-content-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.lower-content-block p {
+    margin: 0;
+    padding: 0;
+    width: 380px;
+}
+
+.lower-list {
+    width: 525px;
+}
+
+.lower-footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.lower-footer-wrapper {
+    display: flex;
+}
+
+.footer-copyright {
+    width: 230px;
+    margin-right: 160px;
+}
+
+.social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    margin-right: 120px;
+}
+
+.footer-feedback {
+    margin: 0;
+    padding: 0;
+    width: 140px;
+}
+
+.footer-developed {
+    margin: 0;
+    padding: 0;
+    width: 110px;
+    margin-left: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+.general-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-us {
+    min-height: 375px;
+    width: 540px;
+}
+
+.contacts {
+    min-height: 375px;
+    width: 300px;
+}
+
+.general-info h2 {
+    padding: 0;
+    margin: 0;
+}
