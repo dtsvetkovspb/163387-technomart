@@ -72,12 +72,22 @@ a {
     line-height: 21px;
 }
 
-.middle-header-user-interface a {
+.user-name,
+.user-enter,
+.user-registration {
     color: #000;
     font-size: 21px;
     font-weight: 21px;
     
     background-color: #fff;
+}
+
+.user-orders,
+.user-profile {
+    font-size: 16px;
+    line-height: 18px;
+    color: #32425c;
+    text-decoration: underline;
 }
 
 .middle-header-user-interface a:hover,
@@ -143,8 +153,6 @@ h2 {
     color: white;
     font-size: 18px;
     line-height: 24px;
-
-    
 }
 
 .footer-logotype {
@@ -220,14 +228,23 @@ h2 {
 
 .breadcrumbs {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .breadcrumbs li a {
+    font-weight: 700;
     color: #000;
     text-transform: uppercase;
 }
 
 .page-title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: 400;
     font-size: 30px;
@@ -236,6 +253,7 @@ h2 {
     color: #32425c;
     
     background-color: #f2f6f8;
+    min-height: 90px;
 }
 
 .filter fieldset {
@@ -257,10 +275,6 @@ h2 {
 .filter-option label {
     font-size: 15px;
     text-transform: uppercase;
-}
-
-.catalog-list {
-    list-style: none;
 }
 
 .catalog-item {
@@ -299,7 +313,7 @@ h2 {
     background-color: #f3f7f9;
 }
 
-.upper-header { 
+.upper-header-wrapper { 
     min-height: 40px;
     display: flex;
     margin-bottom: 45px;
@@ -346,7 +360,7 @@ h2 {
 }
 
 .middle-header-user-interface {
-    width: 280px;
+    width: 300px;
     min-height: 75px;
     margin-left: auto;
 }
@@ -445,4 +459,41 @@ h2 {
 .general-info h2 {
     padding: 0;
     margin: 0;
+}
+
+.filters {
+    width: 220px;
+
+    min-height: 1150px;
+}
+
+.catalog {
+    width: 700px;
+
+    min-height: 1150px;
+}
+
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    min-height: 320px;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
