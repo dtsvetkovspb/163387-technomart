@@ -56,11 +56,14 @@ a {
 }
 
 .middle-header {
+
     background-color: #f3f7f9;
 }
 
 .middle-header-slogan {
+    padding: 0;
     margin: 0;
+
     font-style: italic;
     font-weight: 700;
     font-size: 16px;
@@ -72,6 +75,8 @@ a {
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
+    width: 270px;
+    min-height: 75px;
 }
 
 .middle-header-telephone {
@@ -79,6 +84,36 @@ a {
     font-size: 21px;
     font-weight: 700;
     line-height: 21px;
+    position: relative;
+
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-bottom: 8px;
+
+    border: 3px solid #fff;
+}
+
+.middle-header-telephone::before {
+    content: "";
+  
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    
+    width: 19px;
+    height: 19px;
+    
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.middle-header-requisites p {
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
 }
 
 .user-name,
@@ -103,6 +138,7 @@ a {
 .middle-header-user-interface a:focus {
     color: #ee3643;
 }
+
 .main-navigation {
     font-size: 17px;
     line-height: 17px;
@@ -463,16 +499,14 @@ h2 {
 
 .middle-header {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
 }
 
 .middle-header-slogan {
     margin-left: 50px;
-    width: 250px;
-    min-height: 75px;
-}
-
-.middle-header-requisites {
-    width: 320px;
+    margin-right: 20px;
+    width: 300px;
     min-height: 75px;
 }
 
@@ -480,6 +514,49 @@ h2 {
     width: 300px;
     min-height: 75px;
     margin-left: auto;
+    font-size: 0;
+    position: relative;
+}
+
+.header-button {
+    display: inline-block;
+    padding: 12px 25px;
+
+    font: inherit;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #000;
+    vertical-align: middle;
+    min-width: 50px;
+
+    background-color: #fff;
+    border: none;
+}
+
+.user-enter {
+    margin-left: 20px;
+    padding-left: 45px;
+    position: relative;
+
+}
+
+.user-enter::before {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 17px;
+    top: 14px;
+    left: 14px;
+
+    background-image: url("../img/icon-login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.user-registration {
+    margin-left: 8px;
 }
 
 .upper-content-block {
@@ -624,3 +701,4 @@ input[type="radio"].visually-hidden {
     margin: 0;
     list-style: none;
 }
+
