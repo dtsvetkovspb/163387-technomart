@@ -21,6 +21,31 @@ a {
     color: #fff;
 }
 
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .upper-header {
    font-size: 17px;
    line-height: 18px;
@@ -173,22 +198,6 @@ a {
     background-color: #293449;
 }
 
-h2 {
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.about-us ul {
-    list-style: none;
-}
-
-.about-us li {
-    font-size: 18px;
-    line-height: 20px;
-}
-
 .red-link {
     text-transform: uppercase;
     font-size: 14px;
@@ -262,6 +271,12 @@ h2 {
 .footer-developed a:hover,
 .footer-developed a:focus {
     text-decoration: underline;
+}
+
+.footer-feedback a:active,
+.footer-developed a:active {
+    text-decoration: none;
+    color: #963546;
 }
 
 .red-cart {
@@ -353,8 +368,6 @@ h2 {
     color: #fff;
     background-color: #ee3643;
 }
-
-/* Сеточные стили */
 
 .container {
     width: 940px;
@@ -560,7 +573,7 @@ h2 {
 .upper-content-block {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;  
+    margin-bottom: 30px;  
     min-height: 68px; 
 }
 
@@ -604,6 +617,11 @@ h2 {
 
 .lower-list {
     width: 525px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .lower-footer {
@@ -616,16 +634,38 @@ h2 {
 }
 
 .footer-copyright {
+    margin: 0;
+    padding: 0;
     width: 230px;
     margin-right: 160px;
 }
 
 .social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 160px;
-    margin-right: 120px;
+    width: 131px;
+    margin-right: 130px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 40px;
+    background-color: #212a3a;
+    border-radius: 50%;
+}
+
+.social-button:hover,
+.social-button:focus,
+.social-button:active {
+  background-color: #ee3643;
 }
 
 .footer-feedback {
@@ -637,48 +677,102 @@ h2 {
 .footer-developed {
     margin: 0;
     padding: 0;
-    width: 110px;
+    width: 100px;
     margin-left: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-
 .general-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
+.general-info h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35px;
+}
+
+.general-info p {
+    margin: 0;
+    padding: 0;
+}
+
+.general-info p:first-of-type {
+    margin-bottom: 30px;
+}
+
 .about-us {
     min-height: 375px;
-    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 525px;
+}
+
+.about-us ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.about-us li {
+    font-size: 18px;
+    line-height: 20px;
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
+
+.about-us-button {
+    align-self: flex-start;
 }
 
 .contacts {
     min-height: 375px;
     width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.general-info h2 {
-    padding: 0;
-    margin: 0;
+.map-sm {
+    height: 158px;
+    margin-bottom: 40px;
+}
+
+.map-sm img {
+    width: 300px;
+    height: 158px;
+}
+
+.red-button {
+    display: inline-block;
+    padding: 7px 40px;
+    
+    font: inherit;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+    border: none;
+    border-radius: 3px;
+}
+
+.red-button:hover,
+.red-button:focus {
+    background-color: #ca2c37;
+}
+
+.red-button:active {
+    background-color: #ba2732;
 }
 
 .filters {
