@@ -645,17 +645,33 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form input {
+    box-sizing: border-box;
     border: 0;
     width: 270px;
     padding-left: 50px;
+    color: #fff;
 
     background-color: #293449;
+
+    background-image: url("../img/icon-search-sprite.png");
+    background-position: -8px -12px;
+    background-repeat: no-repeat;
+}
+
+.search-form input:hover {
+    background-image: url("../img/icon-search-sprite.png");
+    background-position: -8px -79px;
+    background-repeat: no-repeat;
 }
 
 .search-form input:focus {
     color: #000;
     background-color: #fff;
     outline: 0;
+
+    background-image: url("../img/icon-search-sprite.png");
+    background-position: -8px -213px;
+    background-repeat: no-repeat;
 }
 
 .search-form input::placeholder {
