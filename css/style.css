@@ -447,9 +447,22 @@ input[type="radio"].visually-hidden {
     height: 23px;
     left: -35px;
     
-    background-image: url("../img/checkbox-off.svg");
+    background-image: url("../img/icon-checkbox-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -20px;
+}
+
+.filter-input-checkbox + label:hover:before {
+    content: "";
+    position: absolute;
+    
+    width: 26px;
+    height: 23px;
+    left: -35px;
+    
+    background-image: url("../img/icon-checkbox-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -83px;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -460,9 +473,22 @@ input[type="radio"].visually-hidden {
     height: 23px;
     left: -35px;
     
-    background-image: url("../img/checkbox-on.svg");
+    background-image: url("../img/icon-checkbox-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -146px;
+}
+
+.filter-input-checkbox:checked + label:hover:after {
+    content: "";
+    position: absolute;
+    
+    width: 26px;
+    height: 23px;
+    left: -35px;
+    
+    background-image: url("../img/icon-checkbox-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -209px;
 }
 
 .filter-input-radio + label::before {
@@ -473,9 +499,22 @@ input[type="radio"].visually-hidden {
     height: 25px;
     left: -35px;
     
-    background-image: url("../img/radio-off.svg");
+    background-image: url("../img/icon-radio-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -20px;
+}
+
+.filter-input-radio + label:hover:before {
+    content: "";
+    position: absolute;
+    
+    width: 25px;
+    height: 25px;
+    left: -35px;
+    
+    background-image: url("../img/icon-radio-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -215px;
 }
 
 .filter-input-radio:checked + label::after {
@@ -486,9 +525,22 @@ input[type="radio"].visually-hidden {
     height: 25px;
     left: -35px;
     
-    background-image: url("../img/radio-on.svg");
+    background-image: url("../img/icon-radio-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -85px;
+}
+
+.filter-input-radio:checked + label:hover:after {
+    content: "";
+    position: absolute;
+    
+    width: 25px;
+    height: 25px;
+    left: -35px;
+    
+    background-image: url("../img/icon-radio-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -150px;
 }
 
 .filter fieldset:last-of-type {
