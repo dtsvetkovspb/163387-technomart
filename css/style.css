@@ -200,23 +200,30 @@ input[type="radio"].visually-hidden {
 .main-navigation ul {
     margin: 0;
     padding: 0;
-
-    display: flex;
     justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
     list-style: none;
-    border-bottom: 5px solid #293449;
 }
 
-.main-navigation a {
+.main-navigation li a {
     color: #fff;
     display: block;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 19px;
     padding-bottom: 19px;
+    border-bottom: 5px solid #293449;
 }
 
+.main-navigation li:first-child a {
+    padding-left: 52px;
+    padding-right: 34px;
+}
+
+.main-navigation li:last-child a {
+    padding-right: 56px;
+}
 
 .main-navigation a:hover,
 .main-navigation a:focus {
@@ -224,7 +231,9 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation a:active {
-    opacity: .5;
+    color: rgba(255,255,255,0.5);
+    background-color: #1d2739;
+    border-bottom-color: #1d2739;
 }
 
 .main-footer {
@@ -993,14 +1002,14 @@ input[type="radio"].visually-hidden {
     content: "";
     position: absolute;
 
-    width: 20px;
+    width: 21px;
     height: 17px;
     right: 10px;
     top: 14px;
 
     background-image: url("../img/icon-user-sprite.png");
     background-repeat: no-repeat;
-    background-position: -21px -77px;
+    background-position: -20px -77px;
 }
 
 .upper-content-block {
