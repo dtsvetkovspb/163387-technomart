@@ -922,12 +922,24 @@ input[type="radio"].visually-hidden {
     top: 14px;
     left: 14px;
 
-    background-image: url("../img/icon-login.svg");
+    background-image: url("../img/icon-login-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -20px;
 }
 
+.user-enter:hover:before {
+    content: "";
+    position: absolute;
 
+    width: 20px;
+    height: 17px;
+    top: 14px;
+    left: 14px;
+
+    background-image: url("../img/icon-login-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -77px;
+}
 
 .user-name {
     padding-left: 45px;
@@ -944,9 +956,23 @@ input[type="radio"].visually-hidden {
     top: 14px;
     left: 14px;
 
-    background-image: url("../img/icon-user.svg");
+    background-image: url("../img/icon-user-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -134px;
+}
+
+.user-name:hover::before {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 17px;
+    top: 14px;
+    left: 14px;
+
+    background-image: url("../img/icon-user-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -192px;
 }
 
 .user-name::after {
@@ -958,9 +984,23 @@ input[type="radio"].visually-hidden {
     right: 10px;
     top: 14px;
 
-    background-image: url("../img/icon-logout.svg");
+    background-image: url("../img/icon-user-sprite.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -20px -20px;
+}
+
+.user-name:hover::after {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 17px;
+    right: 10px;
+    top: 14px;
+
+    background-image: url("../img/icon-user-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -21px -77px;
 }
 
 .upper-content-block {
@@ -1199,6 +1239,12 @@ input[type="radio"].visually-hidden {
 
     min-height: 1150px;
 }
-.user-enter:active::before {
-    opacity: .5;
+
+.header-button:active::before,
+.header-button:active::after {
+    opacity: .3;
+}
+
+.header-button:active {
+    color: rgba(0,0,0,0.3) !important;
 }
