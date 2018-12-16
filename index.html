@@ -86,26 +86,28 @@
           </a>
             <a href="#" class="red-button">Заблудились? Напишите нам!</a>
         </section>
-        <section class="modal modal-feedback visually-hidden">
+        <section class="modal modal-feedback">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <form action="#" class="feedback-form" method="POST">
-            <p class="feedback-item">
+            <p class="feedback-item feedback-name">
               <label for="feedback-name">Ваше имя:</label>
               <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
             </p>
-            <p class="feedback-item">
+            <p class="feedback-item feedback-email">
               <label for="feedback-email">Ваш e-mail:</label>
               <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
             </p>
-            <p class="feedback-item">
+            <p class="feedback-item feedback-text">
               <label for="feedback-text">Текст письма:</label>
-              <input id="feedback-text" type="text" name="feedback" placeholder="В свободной форме">
+              <textarea id="feedback-text" name="feedback" placeholder="В свободной форме"></textarea>
             </p>
-            <button type="submit">Отправить</button>
           </form>
+          <div class="button-wrapper">
+              <button type="submit" class="red-button">Отправить</button>
+            </div>
           <button class="modal-close" type="button">Закрыть</button>
         </section>
-        <div class="large-map visually-hidden">
+          <div class="large-map visually-hidden">
           <img src="img/map-lg.jpg" width="1736" height="779" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">  
           <button class="modal-close" type="button">Закрыть</button>  
         </section>
@@ -123,7 +125,7 @@
                 <a href="#">Новости</a>
               </li>
               <li>
-                <a href="#">Каталог</a>
+                <a href="catalog.html">Каталог</a>
               </li>
               <li>
                 <a href="#">Доставка</a>

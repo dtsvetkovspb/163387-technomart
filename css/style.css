@@ -55,7 +55,7 @@ input[type="radio"].visually-hidden {
 
 
 
-/* ------------------------------ Header styles ------------------------------ */
+/* --------------- Header styles --------------- */
 
 
 .main-header {
@@ -581,7 +581,7 @@ input[type="radio"].visually-hidden {
 
 
 
-/* ------------------------------ Footer styles ------------------------------ */
+/* --------------- Footer styles --------------- */
 
 
 .main-footer {
@@ -760,7 +760,7 @@ input[type="radio"].visually-hidden {
 
 
 
-/* ------------------------------ Main styles ------------------------------ */
+/* --------------- Main styles --------------- */
 
 
 .inner-page {
@@ -1158,18 +1158,21 @@ input[type="radio"].visually-hidden {
     padding-bottom: 80px;
 }
 
-.general-info h2 {
+.about-us h2,
+.contacts h2 {
     padding: 0;
     margin: 0;
     margin-bottom: 35px;
 }
 
-.general-info p {
+.about-us p,
+.contacts p {
     margin: 0;
     padding: 0;
 }
 
-.general-info p:first-of-type {
+.about-us p:first-of-type,
+.contacts p:first-of-type {
     margin-bottom: 30px;
 }
 
@@ -1222,9 +1225,12 @@ input[type="radio"].visually-hidden {
 
 .red-button {
     display: inline-block;
-    padding: 7px 40px;
+    padding: 10px 40px;
     
-    font: inherit;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
     text-align: center;
     color: #ffffff;
     vertical-align: middle;
@@ -1274,4 +1280,136 @@ input[type="radio"].visually-hidden {
     width: 220px;
 
     min-height: 1150px;
+}
+
+
+
+
+/* --------------- Modal styles --------------- */
+
+
+.modal {
+    color: #000;
+    position: fixed;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+.modal-feedback {
+    width: 620px;
+
+    top: 200px;
+    left: 50%;
+    margin-left: -310px;
+
+    background-color: #fff;
+    border-top: 7px solid #ff5358;
+}
+
+.modal-close {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 21px;
+    height: 21px;
+    
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+  
+    cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    right: 1px;
+
+    width: 19px;
+    height: 3px;
+
+    background-color: #ee3643;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+  
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal .feedback-form {
+    display: flex;
+    width: 460px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 45px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 37px;
+}
+
+.modal-feedback p {
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-item label {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 7px;
+}
+
+.feedback-form .feedback-name,
+.feedback-form .feedback-email {
+    width: 220px;
+    margin-bottom: 20px;
+    
+}
+
+.feedback-form .feedback-text {
+    width: 100%;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 186px;
+    padding: 10px 15px;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000000;
+    border: 2px solid #dee3e4;
+    border-radius: 3px;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+    color: #a9a9a9;
+}
+
+.feedback-form textarea {
+    width: 426px;
+    height: 110px;
+}
+
+.button-wrapper {
+    background-color: #f4f4f4;
+    width: 100%;
+    min-height: 112px;
+}
+.button-wrapper > .red-button {
+    margin-top: 37px;
+    margin-left: 80px;
+    margin-right: 80px;
+    width: 460px;
 }
