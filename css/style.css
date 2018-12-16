@@ -213,6 +213,15 @@ input[type="radio"].visually-hidden {
 }
 
 .middle-header-slogan {
+    padding: 0;
+    margin: 0;
+
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
+
     margin-left: 50px;
     margin-right: 70px;
     width: 200px;
@@ -430,19 +439,7 @@ input[type="radio"].visually-hidden {
 }
 
 .middle-header {
-
     background-color: #f3f7f9;
-}
-
-.middle-header-slogan {
-    padding: 0;
-    margin: 0;
-
-    font-style: italic;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 23px;
-    color: #ee3643;
 }
 
 .middle-header-requisites {
