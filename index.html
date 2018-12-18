@@ -89,29 +89,33 @@
         <section class="modal modal-feedback">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <form action="#" class="feedback-form" method="POST">
-            <p class="feedback-item feedback-name">
-              <label for="feedback-name">Ваше имя:</label>
-              <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-            </p>
-            <p class="feedback-item feedback-email">
-              <label for="feedback-email">Ваш e-mail:</label>
-              <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
-            </p>
-            <p class="feedback-item feedback-text">
-              <label for="feedback-text">Текст письма:</label>
-              <textarea id="feedback-text" name="feedback" placeholder="В свободной форме"></textarea>
-            </p>
-          </form>
-          <div class="button-wrapper">
+            <div class="form-header">
+              <p class="feedback-item feedback-name">
+                <label for="feedback-name">Ваше имя:</label>
+                <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+              </p>
+              <p class="feedback-item feedback-email">
+                <label for="feedback-email">Ваш e-mail:</label>
+                <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+              </p>
+              <p class="feedback-item feedback-text">
+                <label for="feedback-text">Текст письма:</label>
+                <textarea id="feedback-text" name="feedback" placeholder="В свободной форме"></textarea>
+              </p>
+            </div>
+            <div class="form-footer">
               <button type="submit" class="red-button">Отправить</button>
             </div>
+          </form>
           <button class="modal-close" type="button">Закрыть</button>
         </section>
-          <div class="large-map visually-hidden">
-          <img src="img/map-lg.jpg" width="1736" height="779" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">  
+        <section class="modal modal-map">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <div class="map-wrapper">
+            <img src="img/map-lg.jpg" width="1736" height="779" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">  
+          </div>
           <button class="modal-close" type="button">Закрыть</button>  
-        </section>
-      </div>
+        </section> 
     </main>
     <footer class="main-footer">
       <div class="upper-footer container">

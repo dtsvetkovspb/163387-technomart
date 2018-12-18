@@ -1304,6 +1304,8 @@ input[type="radio"].visually-hidden {
 
     background-color: #fff;
     border-top: 7px solid #ff5358;
+
+    display: none;
 }
 
 .modal-close {
@@ -1340,18 +1342,6 @@ input[type="radio"].visually-hidden {
   
 .modal-close::after {
     transform: rotate(-45deg);
-}
-
-.modal .feedback-form {
-    display: flex;
-    width: 460px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-top: 45px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 37px;
 }
 
 .modal-feedback p {
@@ -1402,14 +1392,45 @@ input[type="radio"].visually-hidden {
     height: 110px;
 }
 
-.button-wrapper {
-    background-color: #f4f4f4;
+.form-header {
+    background-color: #fff;
+
     width: 100%;
     min-height: 112px;
+
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 460px;
+
+    padding-top: 45px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 37px;
 }
-.button-wrapper > .red-button {
+
+.form-footer {
+    background-color: #f5f5f5;
+}
+
+.form-footer > .red-button {
+    margin-bottom: 37px;
     margin-top: 37px;
     margin-left: 80px;
     margin-right: 80px;
     width: 460px;
+}
+
+.modal-map {
+    top: 50%;
+    left: 50%;
+
+    margin-top: -223px;
+    margin-left: -470px;
+    width: 940px;
+    height: 446px;
+
+    display: none;
 }
