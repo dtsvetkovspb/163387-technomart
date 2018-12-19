@@ -1305,7 +1305,7 @@ input[type="radio"].visually-hidden {
     background-color: #fff;
     border-top: 7px solid #ff5358;
 
-    display: none;
+    
 }
 
 .modal-close {
@@ -1392,11 +1392,10 @@ input[type="radio"].visually-hidden {
     height: 110px;
 }
 
-.form-header {
+.modal-header {
     background-color: #fff;
 
     width: 100%;
-    min-height: 112px;
 
     display: flex;
     
@@ -1411,15 +1410,19 @@ input[type="radio"].visually-hidden {
     padding-bottom: 37px;
 }
 
-.form-footer {
+.modal-footer {
     background-color: #f5f5f5;
+    padding-bottom: 37px;
+    padding-top: 37px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.form-footer > .red-button {
-    margin-bottom: 37px;
-    margin-top: 37px;
-    margin-left: 80px;
-    margin-right: 80px;
+.modal-footer .red-button {
     width: 460px;
 }
 
@@ -1433,4 +1436,88 @@ input[type="radio"].visually-hidden {
     height: 446px;
 
     display: none;
+}
+
+.modal-add-to-cart {
+    width: 620px;
+
+    top: 210px;
+    left: 50%;
+    margin-left: -310px;
+
+    font-family: "Cuprum", "Arial", sans-serif;
+
+    background-color: #fff;
+    border-top: 7px solid #ff5358;
+
+    display: none;
+}
+
+.modal-add-to-cart .modal-header {
+    margin: 0;
+    
+    padding-top: 70px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 63px;
+}
+
+.modal-add-to-cart h2 {
+    position: relative;
+    font-size: 30px;
+    line-height: 30px;
+    margin:0;
+    padding-left: 100px;
+
+    text-transform: none;
+}
+
+.modal-add-to-cart h2::before {
+    position: absolute;
+
+    content: "";
+
+    left: 0px;
+    top: -20px;
+    position: absolute;
+    width: 66px;
+    height: 66px;
+
+    background-image: url("../img/form1.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.modal-add-to-cart .red-button,
+.modal-add-to-cart .white-button {
+    width: 220px;
+    padding: 10px 0;
+    line-height: 18px;
+    font-size: 14px;
+
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #ee3643;
+    border: none;
+    border-radius: 3px;
+    
+}
+
+.modal-add-to-cart .white-button {
+    background-color: #fff;
+    color: #000;
+}
+
+.modal-add-to-cart .red-button:hover,
+.modal-add-to-cart .red-button:focus {
+    background-color: #ca2c37;
+}
+
+.modal-add-to-cart .red-button:active {
+    background-color: #ba2732;
+}
+
+.modal-add-to-cart .white-button:hover,
+.modal-add-to-cart .white-button:focus {
+    box-shadow: 0 0 1pt 1pt red;
 }
