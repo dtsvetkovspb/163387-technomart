@@ -283,6 +283,15 @@ input[type="radio"].visually-hidden {
     
 }
 
+.middle-header-user-interface > .header-button:active::before,
+.middle-header-user-interface > .header-button:active::after {
+    opacity: .3;
+}
+
+.middle-header-user-interface > .header-button:active {
+    color: rgba(0,0,0,0.3);
+}
+
 .user-enter {
     margin-right: 10px;
     padding-left: 45px;
@@ -567,16 +576,6 @@ input[type="radio"].visually-hidden {
     background-color: #1d2739;
     border-bottom-color: #1d2739;
 }
-
-.header-button:active::before,
-.header-button:active::after {
-    opacity: .3;
-}
-
-.header-button:active {
-    color: rgba(0,0,0,0.3) !important;
-}
-
 
 
 
@@ -1059,6 +1058,8 @@ input[type="radio"].visually-hidden {
 
 .catalog-item .actions .buy,
 .catalog-item .actions .bookmark{
+    position: relative;
+
     display:block;
     width:129px;
     margin:0 auto;
@@ -1085,10 +1086,53 @@ input[type="radio"].visually-hidden {
     display:block;
 }
 
+
+.catalog-item .buy::before {
+    content: "";
+
+    left: 12px;
+    top: 8px;
+    position: absolute;
+    width: 15px;
+    height: 16px;
+
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: .3;
+}
+
+.catalog-item .buy:hover::before {
+    opacity: 1;
+}
+
+.catalog-item .buy:hover,
+.catalog-item .buy:focus {
+    background-color: #5fbb2d;
+    border-top-color: #5fbb2d;
+    border-left-color: #5fbb2d;
+    border-right-color: #5fbb2d;
+}
+
+.catalog-item .buy:active {
+    background-color: #518534;
+    border-color: #518534;
+}
+
 .catalog-item .actions .bookmark{
     color:#32425c;
     background:white;
     border-bottom-color:#63a63e;
+}
+
+.catalog-item .actions .bookmark:hover,
+.catalog-item .actions .bookmark:focus {
+    border-color: #32425c;
+}
+
+.catalog-item .actions .bookmark:active {
+    opacity: .3;
 }
 
 .catalog-item-image{
@@ -1305,7 +1349,7 @@ input[type="radio"].visually-hidden {
     background-color: #fff;
     border-top: 7px solid #ff5358;
 
-    
+    display: none;
 }
 
 .modal-close {
