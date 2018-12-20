@@ -1132,7 +1132,8 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item .actions .bookmark:active {
-    opacity: .3;
+    color: rgba(50, 66, 92, 0.3);
+    border-color: #c1c6ce;
 }
 
 .catalog-item-image{
