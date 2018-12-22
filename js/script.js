@@ -33,8 +33,12 @@ feedbackLink.addEventListener("click", function (evt) {
 
 feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedbackPopup.classList.remove("modal-show");
-    feedbackPopup.classList.remove("modal-error");
+    feedbackPopup.classList.add("modal-hide");
+    setTimeout(function () {
+        feedbackPopup.classList.remove("modal-show");
+        feedbackPopup.classList.remove("modal-error");
+        feedbackPopup.classList.remove("modal-hide");
+    }, 200)
 })
 
 feedbackForm.addEventListener("submit", function (evt) {
@@ -55,8 +59,12 @@ window.addEventListener("keydown", function (evt) {
     if (feedbackPopup.classList.contains("modal-show")) {
         if (evt.keyCode === 27) {
             evt.preventDefault();
-            feedbackPopup.classList.remove("modal-show");
-            feedbackPopup.classList.remove("modal-error");
+            feedbackPopup.classList.add("modal-hide");
+            setTimeout(function () {
+                feedbackPopup.classList.remove("modal-show");
+                feedbackPopup.classList.remove("modal-error");
+                feedbackPopup.classList.remove("modal-hide");
+            }, 200)
         }
     } 
 });
@@ -72,15 +80,22 @@ mapLink.addEventListener("click", function (evt) {
 
 mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    mapPopup.classList.remove("modal-show");
+    mapPopup.classList.add("modal-hide");
+    setTimeout(function () {
+        mapPopup.classList.remove("modal-show");
+        mapPopup.classList.remove("modal-hide");
+    }, 200)
 });
 
 window.addEventListener("keydown", function (evt) {
     if (mapPopup.classList.contains("modal-show")) {
         if (evt.keyCode === 27) {
             evt.preventDefault();
-            mapPopup.classList.remove("modal-show");
-            mapPopup.classList.remove("modal-error");
+            mapPopup.classList.add("modal-hide");
+            setTimeout(function () {
+                mapPopup.classList.remove("modal-show");
+                mapPopup.classList.remove("modal-hide");
+            }, 200)
         }
     } 
 });

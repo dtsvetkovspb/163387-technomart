@@ -34,7 +34,9 @@ h2 {
     padding: 0 10px;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
     position: absolute;
 
     width: 1px;
@@ -121,6 +123,10 @@ h2 {
 }
 
 .search-form input:-ms-input-placeholder {
+    color: white;
+}
+
+.search-form input::-ms-input-placeholder {
     color: white;
 }
 
@@ -255,6 +261,9 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-line-pack: start;
@@ -345,7 +354,7 @@ h2 {
     background-position: -20px -20px;
 }
 
-.user-enter:hover:before {
+.user-enter:hover::before {
     content: "";
     position: absolute;
 
@@ -509,7 +518,6 @@ h2 {
     position: relative;
 
     padding-left: 70px;
-    padding-right: 50px;
     padding-top: 9px;
     padding-bottom: 9px;
     margin-bottom: 8px;
@@ -543,7 +551,7 @@ h2 {
 .user-registration {
     color: #000;
     font-size: 21px;
-    font-weight: 21px;
+    font-weight: 400;
     
     background-color: #fff;
 }
@@ -997,7 +1005,12 @@ h2 {
     background-position: -20px -20px;
 }
 
-.filter-input-checkbox + label:hover:before {
+.filter-input-checkbox:focus + label::before {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-input-checkbox + label:hover::before {
     content: "";
     position: absolute;
     
@@ -1023,7 +1036,7 @@ h2 {
     background-position: -20px -146px;
 }
 
-.filter-input-checkbox:checked + label:hover:after {
+.filter-input-checkbox:checked + label:hover::after {
     content: "";
     position: absolute;
     
@@ -1049,7 +1062,12 @@ h2 {
     background-position: -20px -20px;
 }
 
-.filter-input-radio + label:hover:before {
+.filter-input-radio:focus + label::before {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-input-radio + label:hover::before {
     content: "";
     position: absolute;
     
@@ -1075,7 +1093,7 @@ h2 {
     background-position: -20px -85px;
 }
 
-.filter-input-radio:checked + label:hover:after {
+.filter-input-radio:checked + label:hover::after {
     content: "";
     position: absolute;
     
@@ -1279,7 +1297,7 @@ h2 {
 .catalog-list li:nth-child(3n) .price {
     margin-top: 45px;
 }
-.catalog-item .price:after{
+.catalog-item .price::after{
     content:"";
     position:absolute;
     top:0;
@@ -1453,28 +1471,72 @@ h2 {
 
 
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
     0% {
-      transform: translateY(-2000px);
+      -webkit-transform: translateY(-2000px);
+              transform: translateY(-2000px);
     }
   
     70% {
-      transform: translateY(30px);
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
     }
   
     90% {
-      transform: translateY(-10px);
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
     }
   
     100% {
-      transform: translateY(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
 }
 
-@keyframes shake {
+
+
+
+@keyframes bounce {
+    0% {
+      -webkit-transform: translateY(-2000px);
+              transform: translateY(-2000px);
+    }
+  
+    70% {
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+    }
+  
+    90% {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes hide {
+      100% {
+        -webkit-transform: translateY(-2000px);
+                transform: translateY(-2000px);
+      }
+}
+
+@keyframes hide {
+      100% {
+        -webkit-transform: translateY(-2000px);
+                transform: translateY(-2000px);
+      }
+}
+
+@-webkit-keyframes shake {
     0%,
     100% {
-      transform: translateX(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
     }
   
     10%,
@@ -1482,14 +1544,41 @@ h2 {
     50%,
     70%,
     90% {
-      transform: translateX(-10px);
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
     }
   
     20%,
     40%,
     60%,
     80% {
-      transform: translateX(10px);
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
     }
 }
 
@@ -1507,11 +1596,19 @@ h2 {
 .modal-show {
     display: block;
 
-    animation: bounce 0.6s;
+    -webkit-animation: bounce 0.6s;
+
+            animation: bounce 0.6s;
+}
+
+.modal-hide {
+    -webkit-animation: hide 0.5s;
+            animation: hide 0.5s;
 }
 
 .modal-error {  
-    animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;  
+            animation: shake 0.6s;
 }
 
 .modal-feedback {
@@ -1556,12 +1653,14 @@ h2 {
 
 .modal-close::before {
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
 }
   
 .modal-close::after {
     -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
 }
 
 .modal-feedback p {
@@ -1609,6 +1708,11 @@ h2 {
 
 .feedback-form input:-ms-input-placeholder,
 .feedback-form textarea:-ms-input-placeholder {
+    color: #a9a9a9;
+}
+
+.feedback-form input::-ms-input-placeholder,
+.feedback-form textarea::-ms-input-placeholder {
     color: #a9a9a9;
 }
 
