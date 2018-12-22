@@ -84,23 +84,23 @@
           <a href="#" class="map-sm">
             <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
           </a>
-            <a href="#" class="red-button">Заблудились? Напишите нам!</a>
+            <a href="#" class="red-button feedback-link">Заблудились? Напишите нам!</a>
         </section>
-        <section class="modal modal-feedback">
+        <section class="modal modal-feedback modal-show">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <form action="#" class="feedback-form" method="POST">
             <div class="modal-header">
               <p class="feedback-item feedback-name">
                 <label for="feedback-name">Ваше имя:</label>
-                <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+                <input class="abc" id="feedback-name" type="text" name="feedback-name" placeholder="Имя Фамилия">
               </p>
               <p class="feedback-item feedback-email">
                 <label for="feedback-email">Ваш e-mail:</label>
-                <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+                <input id="feedback-email" type="email" name="feedback-email" placeholder="email@example.com">
               </p>
               <p class="feedback-item feedback-text">
                 <label for="feedback-text">Текст письма:</label>
-                <textarea id="feedback-text" name="feedback" placeholder="В свободной форме"></textarea>
+                <textarea id="feedback-text" name="feedback-text" placeholder="В свободной форме"></textarea>
               </p>
             </div>
             <div class="modal-footer">
@@ -111,6 +111,7 @@
         </section>
         <section class="modal modal-map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370521!2d30.32088925191357!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1545512491521" width="940" height="446" allowfullscreen></iframe>
           <div class="map-wrapper">
             <img src="img/map-lg.jpg" width="1736" height="779" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">  
           </div>
@@ -196,5 +197,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
