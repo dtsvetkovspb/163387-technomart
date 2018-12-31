@@ -1463,6 +1463,28 @@ input[type="radio"].visually-hidden {
     min-height: 1150px;
 }
 
+.inner-page-section {
+    padding-bottom: 55px;
+    background-color: #f2f6f8;
+
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.inner-page-section h2 {
+    padding: 65px 0 0 0;
+    margin: 0;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.inner-page-section p {
+    padding: 0;
+    margin: 14px 0;
+}
+
 
 
 
