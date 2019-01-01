@@ -1123,6 +1123,8 @@ input[type="radio"].visually-hidden {
     padding: 0;
     margin: 0;
     list-style: none;
+
+    margin-bottom: 30px;
 }
 
 .catalog-item {
@@ -1308,6 +1310,67 @@ input[type="radio"].visually-hidden {
     border-left-color:#ee3643;
 }
 
+.pagination-list {
+    padding: 0;
+    margin: 0;
+
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+.pagination-item {
+    margin-right: 10px;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+    border-color: #bdc6ca;
+    outline: none;
+}
+
+.pagination-item a:active {
+    border-color: #ee3643;
+    outline: none;
+}
+
+.pagination-item:last-child {
+    margin-right: 0;
+}
+
+.pagination-item a {
+    display: block;
+    background-color: #fff;
+    padding: 9px 14px;
+    color: #000;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+}
+
+.pagination-item-current a {
+    background-color: #ee3643;
+    color: #fff;
+    border: 2px solid #ee3643;
+}
+
+.pagination-item-next a {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus {
+    background-color: #ca2c37;
+    border-color: #ca2c37;
+}
+
+.pagination-item-current a:active {
+    background-color: #ba2732;
+    border-color: #ba2732;
+}
+
 .general-info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1433,7 +1496,7 @@ input[type="radio"].visually-hidden {
 
 .white-button {
     display: inline-block;
-    padding: 8px 38px;
+    padding: 10px 38px;
     
     font: inherit;
     text-align: center;
@@ -1459,11 +1522,9 @@ input[type="radio"].visually-hidden {
 
 .filters {
     width: 220px;
-
-    min-height: 1150px;
 }
 
-.inner-page-section {
+.inner-page-content {
     padding-bottom: 55px;
     background-color: #f2f6f8;
 
@@ -1472,7 +1533,7 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
 }
 
-.inner-page-section h2 {
+.inner-page-content h2 {
     padding: 65px 0 0 0;
     margin: 0;
     font-size: 30px;
@@ -1480,7 +1541,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 30px;
 }
 
-.inner-page-section p {
+.inner-page-content p {
     padding: 0;
     margin: 14px 0;
 }
