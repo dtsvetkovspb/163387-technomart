@@ -945,6 +945,107 @@ input[type="radio"].visually-hidden {
             justify-content: space-between;
 }
 
+.catalog-columns-header {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 10px 20px 9px 20px;
+    margin-bottom: 20px;
+
+    background-color: #f7f3ec;
+}
+
+.catalog-columns-header p {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-columns-header p:first-child {
+    margin-right: 140px;
+}
+
+.catalog-columns-header .catalog-header-price,
+.catalog-columns-header .catalog-header-type,
+.catalog-columns-header .catalog-header-func {
+    color: rgba(0, 0, 0, .3);
+
+    margin-right: 65px;
+
+    text-transform: uppercase;
+    border-bottom: 1px dotted #ee3643;
+}
+
+.catalog-columns-header .catalog-header-price:hover,
+.catalog-columns-header .catalog-header-type:hover,
+.catalog-columns-header .catalog-header-func:hover,
+.catalog-columns-header .catalog-header-price:focus,
+.catalog-columns-header .catalog-header-type:focus,
+.catalog-columns-header .catalog-header-func:focus {
+    color: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid #ee3643;
+}
+
+.catalog-columns-header .catalog-header-price:active,
+.catalog-columns-header .catalog-header-type:active,
+.catalog-columns-header .catalog-header-func:active {
+    border-bottom: 0;
+    color: #ee3643;
+}
+
+.catalog-columns-header .catalog-header-func {
+    margin-right: 45px;
+}
+
+.catalog-columns-header .catalog-active-btn {
+    color: #ee3643;
+    border-bottom: 0;
+    margin-right: 70px;
+}
+
+.catalog-columns-header .catalog-up-btn,
+.catalog-columns-header .catalog-down-btn {
+    font-size: 0;
+    margin-top: 4px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.catalog-columns-header .catalog-up-btn {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5.5px 10px 5.5px;
+    border-color: transparent transparent #ee3642 transparent;
+    margin-right: 18px;
+}
+
+.catalog-columns-header .catalog-up-btn:hover,
+.catalog-columns-header .catalog-up-btn:focus {
+    border-color: transparent transparent #231f20 transparent;
+}
+
+.catalog-columns-header .catalog-up-btn:active {
+    border-color: transparent transparent #ee3642 transparent;
+}
+
+.catalog-columns-header .catalog-down-btn {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5.5px 0 5.5px;
+    border-color: #c5c5c5 transparent transparent transparent;
+}
+
+.catalog-columns-header .catalog-down-btn:hover,
+.catalog-columns-header .catalog-down-btn:focus {
+    border-color: #231f20 transparent transparent transparent;
+}
+
+.catalog-columns-header .catalog-down-btn:active {
+    border-color: #ee3643 transparent transparent transparent;
+}
+
 .filter fieldset {
     padding: 0;
     margin: 0;
