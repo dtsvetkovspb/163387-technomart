@@ -98,6 +98,27 @@
           <form class="filter" method="GET" action="#">
             <fieldset>
               <legend>Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle-wrapper" tabindex="0">
+                    <div class="toggle toggle-min" tabindex="-1"></div>
+                  </div>
+                  <div class="toggle-wrapper" tabindex="0">
+                    <div class="toggle toggle-max" tabindex="-1"></div>
+                  </div>
+                  
+                </div>
+                <div class="price-controls">
+                  <input name="min-price" type="text" value="0">
+                  <label for="max-price">
+                    <input name="max-price" type="text" value="30000">
+                  </label>
+                  
+                </div>
+              </div>
             </fieldset>
             <fieldset>
               <legend>Производители:</legend>
