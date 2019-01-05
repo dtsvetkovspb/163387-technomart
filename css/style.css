@@ -1625,7 +1625,9 @@ input[type="radio"].visually-hidden {
     width: 525px;
 }
 
-.about-us ul {
+.about-us .companies-list {
+    position: relative;
+
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1640,11 +1642,37 @@ input[type="radio"].visually-hidden {
     margin-bottom: 25px;
 }
 
-.about-us li {
+.about-us .companies-list li {
     font-size: 18px;
     line-height: 20px;
     padding-left: 35px;
     margin-bottom: 15px;
+}
+
+.about-us .companies-list li::before {
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #ee3643;
+}
+
+.about-us .companies-list-lines::before {
+    top: 10px;
+    left: 0;
+}
+
+.about-us .companies-list-autotraiding::before {
+    top: 44px;
+    left: 0;
+}
+
+.about-us .companies-list-expedition::before {
+    top: 78px;
+    left: 0;
 }
 
 .about-us-button {
