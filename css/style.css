@@ -1323,17 +1323,23 @@ input[type="radio"].visually-hidden {
     width: 700px;
 }
 
-.catalog-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.catalog-list-wrapper {
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-left: -20px;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
     list-style: none;
-
-    margin-bottom: 30px;
+    
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .catalog-item {
@@ -1341,7 +1347,7 @@ input[type="radio"].visually-hidden {
     width: 218px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-    margin-right: 20px;
+    margin-left: 20px;
     color: #000;
     min-height: 320px;
     text-align: center;
@@ -1407,8 +1413,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item:hover {
-    -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5); 
 }
 
 .catalog-item .buy::before {
@@ -1460,13 +1465,13 @@ input[type="radio"].visually-hidden {
     border-color: #c1c6ce;
 }
 
-.catalog-item-image{
+.catalog-item-image {
     width:218px;
     height:168px;
     position: relative;
 }
 
-.catalog-item-image img{
+.catalog-item-image img {
     position: absolute;
     margin: auto;
     top: 0;
@@ -1475,11 +1480,7 @@ input[type="radio"].visually-hidden {
     bottom: 0; 
 }
 
-.catalog-item:nth-child(3n) {
-    margin-right: 0;
-}
-
-.catalog-item .discount{
+.catalog-item .discount {
     min-height:20px;
     margin-top:15px;
     margin-bottom:10px;
@@ -1487,14 +1488,14 @@ input[type="radio"].visually-hidden {
     text-decoration:line-through;
 }
 
-.catalog-item-title{
+.catalog-item-title {
     min-height:40px;
     padding:0 25px;
     margin-top:10px;
     margin-bottom:15px;    
 }
 
-.catalog-item .price{
+.catalog-item .price {
     position:relative;
     width:80px;
     margin:10px auto;
@@ -1505,10 +1506,11 @@ input[type="radio"].visually-hidden {
     border-radius:3px;
 }
 
-.catalog-list li:nth-child(3n) .price {
+.catalog-item .catalog-item-title + .price {
     margin-top: 45px;
 }
-.catalog-item .price::after{
+
+.catalog-item .price::after {
     content:"";
     position:absolute;
     top:0;
@@ -1517,6 +1519,10 @@ input[type="radio"].visually-hidden {
     height:0;
     border:20px solid white;
     border-left-color:#ee3643;
+}
+
+.inner-page .catalog-list {
+    margin-bottom: 32px;
 }
 
 .pagination-list {
@@ -1579,6 +1585,80 @@ input[type="radio"].visually-hidden {
     background-color: #ba2732;
     border-color: #ba2732;
 }
+
+.popular-header {
+    background-color: #f9f5f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 30px;
+    padding-right: 25px;
+
+    margin-bottom: 20px;
+}
+
+.popular-header h2 {
+    color: #32425c;
+}
+
+.popular-header .popular-button {
+    width: 173px;
+}
+
+.manufacturers-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-left: -20px;
+}
+
+.manufacturers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.manufacturers-item {
+    position: relative;
+    width: 218px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    min-height: 138px;
+    text-align: center;
+}
+
+.manufacturers-item-image {
+    display: block;
+    width:218px;
+    height:138px;
+    position: relative;
+}
+
+.manufacturers-item-image img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+}
+
+.manufacturers-item:hover,
+.manufacturers-item:focus {
+    box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5); 
+}
+
+.manufacturers-item:active {
+    box-shadow: 0px 4px 10px 0px rgba(41, 52, 73, 1); 
+    opacity: .3;
+} 
 
 .general-info {
     display: -webkit-box;
