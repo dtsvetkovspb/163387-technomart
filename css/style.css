@@ -936,6 +936,324 @@ input[type="radio"].visually-hidden {
     background-color: #f2f6f8;
 }
 
+.features {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 60px;
+    margin-bottom: 53px;
+}
+
+.features-header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features-right-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.features-item {
+    width: 300px;
+    
+    position: relative;
+}
+
+.features-item h3 {
+    margin: 23px 0 10px 25px;
+    padding: 0;
+
+    max-width: 140px;
+
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.features-item .features-button {
+    display: block;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 25px;
+    margin-bottom: 22px;
+    padding: 10px 0;
+    width: 135px;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 3px;
+}
+
+.features-item .features-button:hover,
+.features-item .features-button:focus {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.features-item .features-button:active {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+.features-item .flag{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    text-indent: -1000px;
+    overflow: hidden;
+     z-index: 20;
+}
+
+.features-item .flag-new{
+    background:url("../img/new-flag.png") no-repeat 0 0;
+}
+.features-item:not(.features-materials) {
+    margin-left: 20px;
+}
+
+.features-item:not(.features-delivery) {
+    margin-bottom: 20px;
+}
+
+.features-materials {
+    background-color: #ffbf47;
+}
+
+.features-materials::after {
+    content: "";
+    position: absolute;
+
+    width: 44px;
+    height: 65px;
+    right: 43px;
+    top: 31px;
+
+    background-image: url("../img/icon-1.svg");
+    background-repeat: no-repeat;
+}
+
+.features-tools {
+    background-color: #3bbce3;
+}
+
+.features-tools::after {
+    content: "";
+    position: absolute;
+
+    width: 75px;
+    height: 61px;
+    right: 28px;
+    top: 33px;
+
+    background-image: url("../img/icon-2.svg");
+    background-repeat: no-repeat;
+}
+
+.features-technics {
+    background-color: #dc91d8;
+}
+
+.features-technics::after {
+    content: "";
+    position: absolute;
+
+    width: 78px;
+    height: 62px;
+    right: 31px;
+    top: 31px;
+
+    background-image: url("../img/icon-3.svg");
+    background-repeat: no-repeat;
+}
+
+.features-discount {
+    background-color: #8ed78f;
+}
+
+.features-discount::after {
+    content: "";
+    position: absolute;
+
+    width: 59px;
+    height: 72px;
+    right: 45px;
+    top: 26px;
+
+    background-image: url("../img/icon-4.svg");
+    background-repeat: no-repeat;
+}
+
+.features-delivery {
+    background-color: #ffc047;
+}
+
+.features-delivery::after {
+    content: "";
+    position: absolute;
+
+    width: 78px;
+    height: 63px;
+    right: 31px;
+    top: 32px;
+
+    background-image: url("../img/icon-5.svg");
+    background-repeat: no-repeat;
+}
+
+.slider {
+    width: 620px;
+    position: relative;
+
+    background-color: #685c53;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.slider-item {
+    display: none;
+    padding: 25px 20px 22px 25px;
+}
+
+.slider-item:nth-child(1) {
+    background-image: url("../img/slider-bg1.jpg");
+    background-repeat: no-repeat;
+}
+
+.slider-item:nth-child(2) {
+    background-image: url("../img/slider-bg2.jpg");
+    background-repeat: no-repeat;
+}
+
+.slider-item h3 {
+    padding: 0;
+    margin: 0;
+
+    max-width: 250px;
+    
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.slider-item p {
+    max-width: 250px;
+    margin: 0;
+    margin-bottom: 121px;
+    padding: 0;
+    color: #fff;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.slider .slider-item-button {
+    width: 115px;
+}
+
+.slider-controls {
+    position: absolute;
+    
+    left: 50%;
+    bottom: 33px;
+    z-index: 100;
+
+    width: 80px;
+    height: 18px;
+
+    text-align: center;
+    font-size: 0;
+    transform: translateX(-50%);
+}
+
+.slider-controls label {
+    position: relative;
+
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider-controls label::after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    
+    width: 10px;
+    height: 10px;
+
+    background: #fff;
+    border-radius: 50%;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before{
+    content: "";
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    
+    width: 6px;
+    height: 6px;
+    margin: -3px;
+    
+    background-color: rgba(255, 0, 0, 0.842);
+    border-radius: 50%;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+    display: block;
+  }
+  
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+    display: block;
+}
+
+.slider-item::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    width: 22px;
+    height: 40px;
+    top: 114px;
+    left: 25px;
+    background-image: url(../img/icon-left.svg);
+    background-repeat: no-repeat;
+}
+
+.slider-item::after {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    width: 22px;
+    height: 40px;
+    top: 114px;
+    right: 20px;
+    background-image: url(../img/icon-right.svg);
+    background-repeat: no-repeat;
+}
 .catalog-columns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1662,7 +1980,7 @@ input[type="radio"].visually-hidden {
 
 .services {
     background-color: #f4f8f9;
-    position: relative;
+    
 }
 
 .services .background-pattern {
@@ -1670,10 +1988,11 @@ input[type="radio"].visually-hidden {
     
     height: 272px;
     width: 10px;
-    left: 420px;
-    top: 200px;
-    
+    right: 0;
+    top: -45px;
     background: url("../img/services-pattern-light.png");
+    
+    
 }
 
 .services h2 {
@@ -1693,6 +2012,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-list-wrapper {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1701,6 +2021,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-list {
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0;

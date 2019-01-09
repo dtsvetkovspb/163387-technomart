@@ -67,6 +67,57 @@
     </header>
     <main>
       <div class="container">
+        <div class="features">
+          <div class="features-header">
+            <section class="features-materials features-item">
+              <div class="flag flag-new">новинка</div>
+              <h3>Материалы</h3>
+              <a href="#" class="features-button">На любой вкус</a>
+            </section>
+            <section class="features-tools features-item">
+              <h3>Инструмент</h3>
+              <a href="#" class="features-button">На все случаи</a>
+            </section>
+            <section class="features-technics features-item">
+              <h3>Техника</h3>
+              <a href="#" class="features-button">Для стройки</a>
+            </section>
+          </div>
+          <section class="slider">
+            <input class="visually-hidden" type="radio" id="product-1" name="toggle" >
+            <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-item--1" for="product-1"></label>
+              <label class="slider-controls-item slider-controls-item--2" for="product-2"></label>
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <a href="#" class="slider-item-button red-button">
+                  Открыть каталог
+                </a>
+              </li>
+              <li class="slider-item">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+                <a href="#" class="slider-item-button red-button">
+                  Открыть каталог
+                </a>
+              </li>
+            </ul>
+          </section>
+          <div class="features-right-column">
+            <section class="features-discount features-item">
+              <h3>Скидки 50%</h3>
+              <a href="#" class="features-button">На 350 товаров</a>
+            </section>
+            <section class="features-delivery features-item">
+              <h3>Доставка</h3>
+              <a href="#" class="features-button">Бесплатно</a>
+            </section>
+          </div>
+        </div>
         <section class="popular-goods">
           <div class="popular-header">
             <h2>Популярные товары:</h2>
@@ -177,7 +228,6 @@
         </section>
       </div>
         <section class="services">
-          <div class="background-pattern"></div>
           <div class="container">
             <h2>Сервисы</h2>
             <p class="services-header-text">
@@ -186,6 +236,7 @@
             </p>
             <div class="services-list-wrapper">
               <ul class="services-list">
+                <div class="background-pattern"></div>
                 <li class="services-list-item">
                   <a href="#" class="services-current">Доставка</a>
                 </li>
