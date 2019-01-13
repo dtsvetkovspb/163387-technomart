@@ -10,7 +10,6 @@ var isStorageSupport = true;
 var storageName = "";
 var storageEmail = "";
 
-
 try {
     storageName = localStorage.getItem("name"); 
     storageEmail = localStorage.getItem("email");
@@ -99,3 +98,45 @@ window.addEventListener("keydown", function (evt) {
         }
     } 
 });
+
+/* Slider */
+
+var sliderLeftBtn = document.querySelector(".slider-left-btn");
+var sliderRightBtn = document.querySelector(".slider-right-btn");
+var product1 = document.getElementById("product-1");
+var product2 = document.getElementById("product-2");
+
+sliderLeftBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!product1.checked) {
+        product1.checked = true;
+    }
+});
+
+sliderRightBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!product2.checked) {
+        product2.checked = true;
+    }
+});
+
+/* Services slider */
+
+var servicesListItems = document.querySelectorAll(".services-list-item > a");
+var servicesItems = document.querySelectorAll(".services-item");
+
+[].forEach.call(servicesListItems, function (el, i) {
+    el.addEventListener("click", function (e) {
+        e.preventDefault();
+        
+        [].forEach.call(servicesListItems, function (item) {
+            item.classList.remove("services-current")
+        });
+        el.classList.add("services-current");
+        [].forEach.call(servicesItems, function (item) {
+            item.classList.remove("services-active")
+        } );
+        servicesItems[i].classList.add("services-active")
+    });
+}
+);
