@@ -1,10 +1,10 @@
 var feedbackLink = document.querySelector(".feedback-link");
 var feedbackPopup = document.querySelector(".modal-feedback");
-var feedbackClose = feedbackPopup.querySelector(".modal-close");
-var feedbackName = feedbackPopup.querySelector("[name=feedback-name]");
-var feedbackForm = feedbackPopup.querySelector("form");
-var feedbackEmail = feedbackPopup.querySelector("[name=feedback-email]");
-var feedbackText = feedbackPopup.querySelector("[name=feedback-text]");
+var feedbackClose = feedbackPopup ? feedbackPopup.querySelector(".modal-close") : null;
+var feedbackName = feedbackPopup ? feedbackPopup.querySelector("[name=feedback-name]") : null;
+var feedbackForm = feedbackPopup ? feedbackPopup.querySelector("form") : null;
+var feedbackEmail = feedbackPopup ? feedbackPopup.querySelector("[name=feedback-email]") : null;
+var feedbackText = feedbackPopup ? feedbackPopup.querySelector("[name=feedback-text]") : null;
 
 var isStorageSupport = true;
 var storageName = "";
@@ -17,7 +17,7 @@ try {
     isStorageSupport = false;
 }
 
-feedbackLink.addEventListener("click", function (evt) {
+feedbackLink ? feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.add("modal-show");
     
@@ -28,9 +28,9 @@ feedbackLink.addEventListener("click", function (evt) {
     } else {
         feedbackName.focus();
     }
-})
+}) : null;
 
-feedbackClose.addEventListener("click", function (evt) {
+feedbackClose ? feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.add("modal-hide");
     setTimeout(function () {
@@ -38,9 +38,9 @@ feedbackClose.addEventListener("click", function (evt) {
         feedbackPopup.classList.remove("modal-error");
         feedbackPopup.classList.remove("modal-hide");
     }, 200)
-})
+}) : null;
 
-feedbackForm.addEventListener("submit", function (evt) {
+feedbackForm ? feedbackForm.addEventListener("submit", function (evt) {
     if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
         evt.preventDefault();
         feedbackPopup.classList.remove("modal-error");
@@ -52,7 +52,7 @@ feedbackForm.addEventListener("submit", function (evt) {
             localStorage.setItem("email", feedbackEmail.value);
         } 
     }
-})
+}) : null;
 
 window.addEventListener("keydown", function (evt) {
     if (feedbackPopup.classList.contains("modal-show")) {
@@ -70,21 +70,21 @@ window.addEventListener("keydown", function (evt) {
 
 var mapLink = document.querySelector(".map-sm");
 var mapPopup = document.querySelector(".modal-map");
-var mapClose = mapPopup.querySelector(".modal-close");
+var mapClose = mapPopup ? mapPopup.querySelector(".modal-close") : null;
 
-mapLink.addEventListener("click", function (evt) {
+mapLink ? mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("modal-show");
-})
+}) : null;
 
-mapClose.addEventListener("click", function (evt) {
+mapClose ? mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("modal-hide");
     setTimeout(function () {
         mapPopup.classList.remove("modal-show");
         mapPopup.classList.remove("modal-hide");
     }, 200)
-});
+}) : null;
 
 window.addEventListener("keydown", function (evt) {
     if (mapPopup.classList.contains("modal-show")) {
@@ -106,19 +106,19 @@ var sliderRightBtn = document.querySelector(".slider-right-btn");
 var product1 = document.getElementById("product-1");
 var product2 = document.getElementById("product-2");
 
-sliderLeftBtn.addEventListener("click", function (evt) {
+sliderLeftBtn ? sliderLeftBtn.addEventListener("click", function (evt) {
     evt.preventDefault();
     if (!product1.checked) {
         product1.checked = true;
     }
-});
+}) : null;
 
-sliderRightBtn.addEventListener("click", function (evt) {
+sliderRightBtn ? sliderRightBtn.addEventListener("click", function (evt) {
     evt.preventDefault();
     if (!product2.checked) {
         product2.checked = true;
     }
-});
+}) : null;
 
 /* Services slider */
 
@@ -140,3 +140,28 @@ var servicesItems = document.querySelectorAll(".services-item");
     });
 }
 );
+
+/* Buy cart modal */
+
+var buyLinks = document.querySelectorAll(".buy");
+var modalCart = document.querySelector(".modal-cart")
+var modalClose = modalCart ? modalCart.querySelector(".modal-close") : null;
+
+[].forEach.call(buyLinks, function (el) {
+    el.addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log(modalClose);
+
+        modalCart.classList.toggle("modal-show");
+    })
+})
+
+modalClose ? modalClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalCart.classList.add("modal-hide");
+
+    setTimeout(function () {
+        modalCart.classList.remove("modal-show");
+        modalCart.classList.remove("modal-hide");
+    }, 200)
+}) : null;
